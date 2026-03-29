@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react';
 interface TaxResult {
   annualGrosspay: number;
   monthlyGrossPay: number;
-  biweeklyGrossPlay: number;
-  weeklyGrossPlay: number;
+  biweeklyGrossPay: number;
+  weeklyGrossPay: number;
   federalTax: number;
   stateTax: number;
   socialSecurity: number;
@@ -448,9 +448,9 @@ function calculateTaxes(
   const totalDeductions = federalTax + stateTax + socialSecurity + medicare;
   const annualTakeHome = salary - totalDeductions;
 
-  const monthlyGrossPlay = salary / 12;
-  const biweeklyGrossPlay = salary / 26;
-  const weeklyGrossPlay = salary / 52;
+  const monthlyGrossPay = salary / 12;
+  const biweeklyGrossPay = salary / 26;
+  const weeklyGrossPay = salary / 52;
 
   const monthlyTakeHome = annualTakeHome / 12;
   const biweeklyTakeHome = annualTakeHome / 26;
@@ -459,10 +459,10 @@ function calculateTaxes(
   const effectiveTaxRate = salary > 0 ? (totalDeductions / salary) * 100 : 0;
 
   return {
-    annualGrossPlay: salary,
-    monthlyGrossPlay,
-    biweeklyGrossPlay,
-    weeklyGrossPlay,
+    annualGrosspay: salary,
+    monthlyGrossPay,
+    biweeklyGrossPay,
+    weeklyGrossPay,
     federalTax,
     stateTax,
     socialSecurity,
@@ -759,7 +759,7 @@ export default function Calculator() {
 
             <div className="card text-center">
               <div className="text-2xl font-bold text-purple-600">
-                ${result.annualGrossPlay.toLocaleString('en-US', {
+                ${result.annualGrosspay.toLocaleString('en-US', {
                   maximumFractionDigits: 0,
                 })}
               </div>
