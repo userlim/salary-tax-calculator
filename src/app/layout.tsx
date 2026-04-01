@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'Salary Tax Calculator – Free Income Tax Estimator 2025-2026',
   description:
     'Free online salary tax calculator. Estimate your take-home pay, federal and state taxes, Social Security, and Medicare. 2025-2026 tax brackets included.',
-  metadataBase: new URL('https://salary-tax-calculator.vercel.app'),
+  metadataBase: new URL('https://take-home-pay-calculator-sandy.vercel.app'),
   openGraph: {
     title: 'Salary Tax Calculator – Free Income Tax Estimator',
     description:
       'Calculate your take-home pay instantly. Includes federal tax brackets, state taxes, FICA, and more.',
-    url: 'https://salary-tax-calculator.vercel.app',
+    url: 'https://take-home-pay-calculator-sandy.vercel.app',
     siteName: 'Salary Tax Calculator',
     locale: 'en_US',
     type: 'website',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'max-video-preview': -1,
   },
   alternates: {
-    canonical: 'https://salary-tax-calculator.vercel.app',
+    canonical: 'https://take-home-pay-calculator-sandy.vercel.app',
   },
   keywords: [
     'salary tax calculator',
