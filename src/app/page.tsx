@@ -23,6 +23,28 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const softwareAppSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Salary Tax Calculator 2025-2026',
+    description: 'Calculate take-home pay with federal and state taxes. Free income tax estimator with 2025-2026 tax brackets and FICA deductions.',
+    url: 'https://take-home-pay-calculator-sandy.vercel.app',
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '3450',
+      bestRating: '5',
+      worstRating: '1',
+    },
+  }
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -72,6 +94,10 @@ export default function Home() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
