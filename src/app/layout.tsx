@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Salary Tax Calculator (Free, 2026) – Take-Home Pay Estimator',
@@ -45,11 +46,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-P04TH8XJJ9"
-        />
-        <script
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-P04TH8XJJ9" strategy="lazyOnload" />
+        <Script id="gtag-init" strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
