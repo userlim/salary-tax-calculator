@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
+    twitter: {
+    card: 'summary_large_image',
+    title: 'Salary Tax Calculator — Take-Home Pay Estimator',
+    description: 'Take-Home Pay Estimator',
+  },
   robots: {
     index: true,
     follow: true,

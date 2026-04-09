@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Terms of Service - Salary Tax Calculator',
   description: 'Terms of Service for Salary Tax Calculator.',
+  robots: { index: false, follow: true },
 }
 
 export default function TermsOfService() {
