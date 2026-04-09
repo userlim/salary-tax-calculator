@@ -2,9 +2,8 @@ import type { Metadata } from 'next';
 import Calculator from './calculator';
 
 export const metadata: Metadata = {
-  title: 'Salary Tax Calculator – Free Income Tax Estimator 2025-2026',
-  description:
-    'Free online salary tax calculator. Calculate your take-home pay with 2025-2026 federal tax brackets, state taxes, and FICA deductions.',
+  title: 'Free Salary Tax Calculator (2026) – Take-Home Pay After All Deductions',
+  description: 'Calculate your exact take-home pay after federal, state, Social Security & Medicare taxes. Free salary calculator for all 50 states — instant, accurate results.',
   keywords: [
     'salary tax calculator',
     'income tax calculator',
