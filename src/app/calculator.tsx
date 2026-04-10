@@ -591,7 +591,7 @@ export default function Calculator() {
     <div className="w-full max-w-2xl mx-auto">
       <div className="card">
         <div className="mb-6 flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-gray-900">
+          <h2 className="text-2xl font-bold text-gray-100">
             {t('title')}
           </h2>
           <select
@@ -617,7 +617,7 @@ export default function Calculator() {
 
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-300 mb-2">
               {t('annual_salary')}
             </label>
             <input
@@ -632,7 +632,7 @@ export default function Calculator() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <label className="block text-sm font-semibold text-gray-300 mb-2">
                 {t('filing_status')}
               </label>
               <select
@@ -648,7 +648,7 @@ export default function Calculator() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <label className="block text-sm font-semibold text-gray-300 mb-2">
                 {t('state')}
               </label>
               <select
@@ -666,7 +666,7 @@ export default function Calculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-300 mb-2">
               {t('pay_frequency')}
             </label>
             <div className="grid grid-cols-4 gap-2">
@@ -703,7 +703,7 @@ export default function Calculator() {
                 maximumFractionDigits: 2,
               })}
             </div>
-            <p className="text-center text-gray-700 font-semibold">
+            <p className="text-center text-gray-300 font-semibold">
               {t('take_home_pay')} ({payFrequency})
             </p>
           </div>
@@ -715,7 +715,7 @@ export default function Calculator() {
                   maximumFractionDigits: 0,
                 })}
               </div>
-              <p className="text-xs text-gray-600 mt-1">{t('federal_tax')}</p>
+              <p className="text-xs text-gray-400 mt-1">{t('federal_tax')}</p>
             </div>
 
             <div className="card text-center">
@@ -724,7 +724,7 @@ export default function Calculator() {
                   maximumFractionDigits: 0,
                 })}
               </div>
-              <p className="text-xs text-gray-600 mt-1">{t('state_tax')}</p>
+              <p className="text-xs text-gray-400 mt-1">{t('state_tax')}</p>
             </div>
 
             <div className="card text-center">
@@ -733,7 +733,7 @@ export default function Calculator() {
                   maximumFractionDigits: 0,
                 })}
               </div>
-              <p className="text-xs text-gray-600 mt-1">Social Security</p>
+              <p className="text-xs text-gray-400 mt-1">Social Security</p>
             </div>
 
             <div className="card text-center">
@@ -742,7 +742,7 @@ export default function Calculator() {
                   maximumFractionDigits: 0,
                 })}
               </div>
-              <p className="text-xs text-gray-600 mt-1">Medicare</p>
+              <p className="text-xs text-gray-400 mt-1">Medicare</p>
             </div>
 
             <div className="card text-center">
@@ -752,7 +752,7 @@ export default function Calculator() {
                 })}
                 %
               </div>
-              <p className="text-xs text-gray-600 mt-1">
+              <p className="text-xs text-gray-400 mt-1">
                 {t('effective_tax_rate')}
               </p>
             </div>
@@ -763,13 +763,13 @@ export default function Calculator() {
                   maximumFractionDigits: 0,
                 })}
               </div>
-              <p className="text-xs text-gray-600 mt-1">{t('gross_pay')}</p>
+              <p className="text-xs text-gray-400 mt-1">{t('gross_pay')}</p>
             </div>
           </div>
 
           {breakdown && breakdown.length > 0 && (
             <div className="card">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">
+              <h3 className="text-lg font-bold text-gray-100 mb-4">
                 Tax Breakdown
               </h3>
               <div className="space-y-3">
@@ -781,11 +781,11 @@ export default function Calculator() {
                           className="w-3 h-3 rounded-full"
                           style={{ backgroundColor: item.color }}
                         />
-                        <span className="text-sm font-semibold text-gray-700">
+                        <span className="text-sm font-semibold text-gray-300">
                           {item.label}
                         </span>
                       </div>
-                      <span className="text-sm font-bold text-gray-900">
+                      <span className="text-sm font-bold text-gray-100">
                         {item.percentage.toFixed(1)}%
                       </span>
                     </div>
@@ -798,7 +798,7 @@ export default function Calculator() {
                         }}
                       />
                     </div>
-                    <div className="text-xs text-gray-600 mt-1">
+                    <div className="text-xs text-gray-400 mt-1">
                       ${item.value.toLocaleString('en-US', {
                         maximumFractionDigits: 0,
                       })}
@@ -807,9 +807,9 @@ export default function Calculator() {
                 ))}
               </div>
 
-              <div className="mt-6 pt-4 border-t border-gray-200">
+              <div className="mt-6 pt-4 border-t border-white/10">
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-gray-900">
+                  <span className="font-bold text-gray-100">
                     {t('total_deductions')}
                   </span>
                   <span className="text-lg font-bold text-purple-600">
@@ -822,8 +822,8 @@ export default function Calculator() {
             </div>
           )}
 
-          <div className="card bg-blue-50 border-blue-200">
-            <p className="text-xs text-gray-600 leading-relaxed">
+          <div className="card bg-blue-500/10 border-blue-200">
+            <p className="text-xs text-gray-400 leading-relaxed">
               <strong>Disclaimer:</strong> This calculator provides estimates
               based on 2025-2026 federal tax brackets and standard state rates.
               Actual tax liability may differ based on deductions, credits,
