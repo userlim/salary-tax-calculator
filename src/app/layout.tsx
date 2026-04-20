@@ -1,39 +1,33 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import type { Metadata } from 'next'
+import './globals.css'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Salary Tax Calculator (Free, 2026) – Take-Home Pay Estimator',
-  description:
-    'Calculate your take-home pay in seconds. Free 2026 salary tax calculator with federal & state brackets, FICA, and deductions. See your net income — try now.',
-  keywords:
-    'salary calculator, take home pay calculator, paycheck calculator, income tax calculator, after tax salary calculator, hourly to salary calculator, net pay calculator, federal tax calculator, tax bracket calculator 2026, gross to net calculator, salary after tax, state tax calculator, w2 tax calculator, paycheck withholding calculator, how much tax on my salary',
+  description: 'Calculate your take-home pay in seconds. Free 2026 salary tax calculator with federal & state brackets, FICA, and deductions. See your net income — try now.',
+  keywords: 'salary calculator, take home pay calculator, paycheck calculator, income tax calculator, after tax salary calculator, hourly to salary calculator, net pay calculator, federal tax calculator, tax bracket calculator 2026, gross to net calculator, salary after tax, state tax calculator, w2 tax calculator, paycheck withholding calculator, how much tax on my salary',
   metadataBase: new URL('https://take-home-pay-calculator-sandy.vercel.app'),
   openGraph: {
     title: 'Salary Tax Calculator (Free, 2026) – Take-Home Pay Estimator',
-    description:
-      'Calculate your take-home pay in seconds. Free 2026 salary tax calculator with federal & state brackets, FICA, and deductions. See your net income — try now.',
-  keywords:
-    'salary calculator, take home pay calculator, paycheck calculator, income tax calculator, after tax salary calculator, hourly to salary calculator, net pay calculator, federal tax calculator, tax bracket calculator 2026, gross to net calculator, salary after tax, state tax calculator, w2 tax calculator, paycheck withholding calculator, how much tax on my salary',
+    description: 'Calculate your take-home pay in seconds. Free 2026 salary tax calculator with federal & state brackets, FICA, and deductions. See your net income — try now.',
     url: 'https://take-home-pay-calculator-sandy.vercel.app',
     siteName: 'Salary Tax Calculator',
     locale: 'en_US',
     type: 'website',
   },
-    twitter: {
+  twitter: {
     card: 'summary_large_image',
-    title: 'Salary Tax Calculator — Take-Home Pay Estimator',
-    description: 'Take-Home Pay Estimator',
-  keywords:
-    'salary calculator, take home pay calculator, paycheck calculator, income tax calculator, after tax salary calculator, hourly to salary calculator, net pay calculator, federal tax calculator, tax bracket calculator 2026, gross to net calculator, salary after tax, state tax calculator, w2 tax calculator, paycheck withholding calculator, how much tax on my salary',
+    title: 'Salary Tax Calculator',
+    description: 'Calculate your take-home pay in seconds. Free 2026 salary tax calculator with federal & state brackets, FICA, and deductions. See your net income — try now.',
   },
   robots: {
     index: true,
     follow: true,
-    'max-image-preview': 'large',
+    'max-image-preview': 'large' as const,
     'max-snippet': -1,
     'max-video-preview': -1,
   },
+  icons: { icon: '/favicon.svg' },
   alternates: {
     canonical: 'https://take-home-pay-calculator-sandy.vercel.app',
     languages: {
@@ -41,17 +35,6 @@ export const metadata: Metadata = {
       'x-default': 'https://take-home-pay-calculator-sandy.vercel.app',
     },
   },
-  },
-  keywords: [
-    'salary tax calculator',
-    'income tax calculator',
-    'take home pay calculator',
-    'paycheck calculator',
-    'federal tax calculator',
-    'state tax calculator',
-    'FICA calculator',
-    'net pay calculator',
-  ],
 };
 
 export default function RootLayout({
@@ -106,19 +89,19 @@ export default function RootLayout({
         <main className="min-h-screen bg-gradient-to-br from-white via-purple-50 to-white">
           {children}
         </main>
-        <footer className="border-t border-white/5 py-6 text-center text-sm text-gray-500 bg-black/20 backdrop-blur-sm">
+        <footer className="border-t border-white/5 py-6 text-center text-sm text-[var(--text-secondary)] bg-black/20 backdrop-blur-sm">
           
             <div className="flex flex-wrap justify-center gap-4 mb-3">
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Related Free Tools:</span>
-                <a href="https://loan-payment-calculator-eosin.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">Loan Payment Calculator</a>
-                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">Inflation Rate Calculator</a>
-                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">Gold Price Calculator</a>
-                <a href="https://fuel-cost-calculator-ten.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">Fuel Cost Calculator</a>
-                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">UtiliCalc All-in-One Tools</a>
+              <span className="text-xs text-[var(--text-secondary)] font-semibold uppercase tracking-wider">Related Free Tools:</span>
+                <a href="https://loan-payment-calculator-eosin.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Loan Payment Calculator</a>
+                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Inflation Rate Calculator</a>
+                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Gold Price Calculator</a>
+                <a href="https://fuel-cost-calculator-ten.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Fuel Cost Calculator</a>
+                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">UtiliCalc All-in-One Tools</a>
             </div>
           <div className="flex flex-wrap justify-center gap-4 mb-3">
-            <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors text-xs">Privacy Policy</a>
-            <a href="/terms" className="text-gray-400 hover:text-white transition-colors text-xs">Terms of Service</a>
+            <a href="/privacy-policy" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Privacy Policy</a>
+            <a href="/terms" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Terms of Service</a>
           </div>
           &copy; 2026 Take Home Pay Calculator. All rights reserved.
         </footer>
