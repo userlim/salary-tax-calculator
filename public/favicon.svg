@@ -1,6 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect x="10" y="20" width="80" height="60" rx="8" fill="#7c5cbf" opacity="0.15"/>
-  <rect x="15" y="25" width="70" height="50" rx="6" fill="none" stroke="#7c5cbf" stroke-width="3"/>
-  <text x="50" y="58" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold" fill="#7c5cbf">$</text>
-  <line x1="30" y1="38" x2="70" y2="38" stroke="#b49ee8" stroke-width="2"/>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#0E7490"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="url(#bg)"/>
+  <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Document/receipt -->
+    <rect x="28" y="22" width="44" height="56" rx="4" stroke-width="2.5" fill="rgba(255,255,255,0.1)"/>
+    <!-- Lines -->
+    <path d="M36 34 L64 34" stroke-width="2" opacity="0.6"/>
+    <path d="M36 42 L58 42" stroke-width="2" opacity="0.6"/>
+    <path d="M36 50 L62 50" stroke-width="2" opacity="0.6"/>
+    <!-- Divider -->
+    <path d="M36 58 L64 58" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <!-- Total -->
+    <path d="M36 66 L50 66" stroke-width="2.5"/>
+    <text x="62" y="69" text-anchor="middle" font-size="14" font-weight="bold" fill="white" stroke="none" font-family="sans-serif">$</text>
+  </g>
 </svg>
