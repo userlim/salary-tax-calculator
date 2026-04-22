@@ -617,7 +617,7 @@ export default function Calculator() {
 
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-semibold text-[var(--text-muted)] mb-2">
+            <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
               {t('annual_salary')}
             </label>
             <input
@@ -632,7 +632,7 @@ export default function Calculator() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-semibold text-[var(--text-muted)] mb-2">
+              <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
                 {t('filing_status')}
               </label>
               <select
@@ -648,7 +648,7 @@ export default function Calculator() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-[var(--text-muted)] mb-2">
+              <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
                 {t('state')}
               </label>
               <select
@@ -666,7 +666,7 @@ export default function Calculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[var(--text-muted)] mb-2">
+            <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
               {t('pay_frequency')}
             </label>
             <div className="grid grid-cols-4 gap-2">
@@ -676,7 +676,7 @@ export default function Calculator() {
                   onClick={() => setPayFrequency(freq)}
                   className={`py-2 px-3 rounded-lg font-semibold transition-all text-sm ${
                     payFrequency === freq
-                      ? 'bg-purple-600 text-white'
+                      ? 'bg-purple-600 text-[#191F28]'
                       : 'bg-purple-100 text-purple-900 hover:bg-purple-200'
                   }`}
                 >
@@ -703,7 +703,7 @@ export default function Calculator() {
                 maximumFractionDigits: 2,
               })}
             </div>
-            <p className="text-center text-[var(--text-muted)] font-semibold">
+            <p className="text-center text-[#8B95A1] font-semibold">
               {t('take_home_pay')} ({payFrequency})
             </p>
           </div>
@@ -715,7 +715,7 @@ export default function Calculator() {
                   maximumFractionDigits: 0,
                 })}
               </div>
-              <p className="text-xs text-[var(--text-muted)] mt-1">{t('federal_tax')}</p>
+              <p className="text-xs text-[#8B95A1] mt-1">{t('federal_tax')}</p>
             </div>
 
             <div className="card text-center">
@@ -724,7 +724,7 @@ export default function Calculator() {
                   maximumFractionDigits: 0,
                 })}
               </div>
-              <p className="text-xs text-[var(--text-muted)] mt-1">{t('state_tax')}</p>
+              <p className="text-xs text-[#8B95A1] mt-1">{t('state_tax')}</p>
             </div>
 
             <div className="card text-center">
@@ -733,7 +733,7 @@ export default function Calculator() {
                   maximumFractionDigits: 0,
                 })}
               </div>
-              <p className="text-xs text-[var(--text-muted)] mt-1">Social Security</p>
+              <p className="text-xs text-[#8B95A1] mt-1">Social Security</p>
             </div>
 
             <div className="card text-center">
@@ -742,7 +742,7 @@ export default function Calculator() {
                   maximumFractionDigits: 0,
                 })}
               </div>
-              <p className="text-xs text-[var(--text-muted)] mt-1">Medicare</p>
+              <p className="text-xs text-[#8B95A1] mt-1">Medicare</p>
             </div>
 
             <div className="card text-center">
@@ -752,7 +752,7 @@ export default function Calculator() {
                 })}
                 %
               </div>
-              <p className="text-xs text-[var(--text-muted)] mt-1">
+              <p className="text-xs text-[#8B95A1] mt-1">
                 {t('effective_tax_rate')}
               </p>
             </div>
@@ -763,7 +763,7 @@ export default function Calculator() {
                   maximumFractionDigits: 0,
                 })}
               </div>
-              <p className="text-xs text-[var(--text-muted)] mt-1">{t('gross_pay')}</p>
+              <p className="text-xs text-[#8B95A1] mt-1">{t('gross_pay')}</p>
             </div>
           </div>
 
@@ -781,7 +781,7 @@ export default function Calculator() {
                           className="w-3 h-3 rounded-full"
                           style={{ backgroundColor: item.color }}
                         />
-                        <span className="text-sm font-semibold text-[var(--text-muted)]">
+                        <span className="text-sm font-semibold text-[#8B95A1]">
                           {item.label}
                         </span>
                       </div>
@@ -789,7 +789,7 @@ export default function Calculator() {
                         {item.percentage.toFixed(1)}%
                       </span>
                     </div>
-                    <div className="w-full bg-[rgba(255,255,255,0.04)] rounded-full h-2">
+                    <div className="w-full bg-[#F7F8FA] rounded-full h-2">
                       <div
                         className="h-2 rounded-full transition-all"
                         style={{
@@ -798,7 +798,7 @@ export default function Calculator() {
                         }}
                       />
                     </div>
-                    <div className="text-xs text-[var(--text-muted)] mt-1">
+                    <div className="text-xs text-[#8B95A1] mt-1">
                       ${item.value.toLocaleString('en-US', {
                         maximumFractionDigits: 0,
                       })}
@@ -807,7 +807,7 @@ export default function Calculator() {
                 ))}
               </div>
 
-              <div className="mt-6 pt-4 border-t border-white/10">
+              <div className="mt-6 pt-4 border-t border-[#E5E8EB]">
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-gray-100">
                     {t('total_deductions')}
@@ -823,7 +823,7 @@ export default function Calculator() {
           )}
 
           <div className="card bg-blue-500/10 border-[rgba(255,255,255,0.08)]">
-            <p className="text-xs text-[var(--text-muted)] leading-relaxed">
+            <p className="text-xs text-[#8B95A1] leading-relaxed">
               <strong>Disclaimer:</strong> This calculator provides estimates
               based on 2025-2026 federal tax brackets and standard state rates.
               Actual tax liability may differ based on deductions, credits,
