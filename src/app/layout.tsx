@@ -1,40 +1,46 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from 'next';
+import './globals.css';
 import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Salary Tax Calculator (Free, 2026) – Take-Home Pay Estimator',
-  description: 'Calculate your take-home pay in seconds. Free 2026 salary tax calculator with federal & state brackets, FICA, and deductions. See your net income — try now.',
-  keywords: 'salary calculator, take home pay calculator, paycheck calculator, income tax calculator, after tax salary calculator, hourly to salary calculator, net pay calculator, federal tax calculator, tax bracket calculator 2026, gross to net calculator, salary after tax, state tax calculator, w2 tax calculator, paycheck withholding calculator, how much tax on my salary',
+  description:
+    'Calculate your take-home pay in seconds. Free 2026 salary tax calculator with federal & state brackets, FICA, and deductions. See your net income — try now.',
   metadataBase: new URL('https://take-home-pay-calculator-sandy.vercel.app'),
   openGraph: {
     title: 'Salary Tax Calculator (Free, 2026) – Take-Home Pay Estimator',
-    description: 'Calculate your take-home pay in seconds. Free 2026 salary tax calculator with federal & state brackets, FICA, and deductions. See your net income — try now.',
+    description:
+      'Calculate your take-home pay in seconds. Free 2026 salary tax calculator with federal & state brackets, FICA, and deductions. See your net income — try now.',
     url: 'https://take-home-pay-calculator-sandy.vercel.app',
     siteName: 'Salary Tax Calculator',
     locale: 'en_US',
     type: 'website',
   },
-  twitter: {
+    twitter: {
     card: 'summary_large_image',
-    title: 'Salary Tax Calculator',
-    description: 'Calculate your take-home pay in seconds. Free 2026 salary tax calculator with federal & state brackets, FICA, and deductions. See your net income — try now.',
+    title: 'Salary Tax Calculator — Take-Home Pay Estimator',
+    description: 'Take-Home Pay Estimator',
   },
   robots: {
     index: true,
     follow: true,
-    'max-image-preview': 'large' as const,
+    'max-image-preview': 'large',
     'max-snippet': -1,
     'max-video-preview': -1,
   },
-  icons: { icon: '/favicon.svg' },
   alternates: {
     canonical: 'https://take-home-pay-calculator-sandy.vercel.app',
-    languages: {
-      'en': 'https://take-home-pay-calculator-sandy.vercel.app',
-      'x-default': 'https://take-home-pay-calculator-sandy.vercel.app',
-    },
   },
+  keywords: [
+    'salary tax calculator',
+    'income tax calculator',
+    'take home pay calculator',
+    'paycheck calculator',
+    'federal tax calculator',
+    'state tax calculator',
+    'FICA calculator',
+    'net pay calculator',
+  ],
 };
 
 export default function RootLayout({
@@ -67,41 +73,24 @@ export default function RootLayout({
           content="black-translucent"
         />
         <meta name="theme-color" content="#fefcff" />
-              {/* BreadcrumbList Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://take-home-pay-calculator-sandy.vercel.app"}, {"@type": "ListItem", "position": 2, "name": "Salary Tax Calculator", "item": "https://take-home-pay-calculator-sandy.vercel.app"}]})
-        }} />
-        {/* Organization & WebSite Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({"@context": "https://schema.org", "@type": "WebSite", "name": "Salary Tax Calculator", "url": "https://take-home-pay-calculator-sandy.vercel.app", "publisher": {"@type": "Organization", "name": "UtiliCalc Tools", "url": "https://utilicalc.vercel.app", "logo": {"@type": "ImageObject", "url": "https://take-home-pay-calculator-sandy.vercel.app/favicon.svg"}}, "potentialAction": {"@type": "SearchAction", "target": "https://take-home-pay-calculator-sandy.vercel.app/?q={search_term_string}", "query-input": "required name=search_term_string"}})
-        }} />
-        {/* Preconnect & DNS-Prefetch Hints */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
-        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
-        {/* Speakable Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({"@context": "https://schema.org", "@type": "WebPage", "speakable": {"@type": "SpeakableSpecification", "cssSelector": ["h1", ".keyword-seo-section p"]}})
-        }} />
-</head>
+      </head>
       <body suppressHydrationWarning>
-        <main className="min-h-screen bg-gradient-to-br from-white via-purple-50 to-white">
+        <main className="min-h-screen">
           {children}
         </main>
-        <footer className="border-t border-[#E5E8EB] py-6 text-center text-sm text-[#4E5968] bg-white/20 backdrop-blur-sm">
+        <footer className="border-t border-gray-200 py-4 text-center text-sm text-gray-400">
           
             <div className="flex flex-wrap justify-center gap-4 mb-3">
-              <span className="text-xs text-[#4E5968] font-semibold uppercase tracking-wider">Related Free Tools:</span>
-                <a href="https://loan-payment-calculator-eosin.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">Loan Payment Calculator</a>
-                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">Inflation Rate Calculator</a>
-                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">Gold Price Calculator</a>
-                <a href="https://fuel-cost-calculator-ten.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">Fuel Cost Calculator</a>
-                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">UtiliCalc All-in-One Tools</a>
+              <span className="text-xs text-gray-400 font-semibold">Related Free Tools:</span>
+                <a href="https://loan-payment-calculator-eosin.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Loan Payment Calculator</a>
+                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Inflation Rate Calculator</a>
+                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Gold Price Calculator</a>
+                <a href="https://fuel-cost-calculator-ten.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Fuel Cost Calculator</a>
+                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">UtiliCalc All-in-One Tools</a>
             </div>
           <div className="flex flex-wrap justify-center gap-4 mb-3">
-            <a href="/privacy-policy" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">Privacy Policy</a>
-            <a href="/terms" className="text-[#8B95A1] hover:text-[#191F28] transition-colors text-xs">Terms of Service</a>
+            <a href="/privacy-policy" className="text-blue-600 hover:text-blue-800 text-xs">Privacy Policy</a>
+            <a href="/terms" className="text-blue-600 hover:text-blue-800 text-xs">Terms of Service</a>
           </div>
           &copy; 2026 Take Home Pay Calculator. All rights reserved.
         </footer>
